@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login | Blogify</title>
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="login.css"/>
 </head>
 <body>
-    <h2>LOGIN</h2>
 
-    <input type="email" placeholder="Email"> <br>
-    <input type="password" placeholder="Password"> <br>
+<div class="login-container">
+    <div class="login-box">
 
-    <button>Sign in</button>
-
-    <p>Don't have an Account?
-        <a href="register.html">Sign Up</a>
+    <h2>Log in</h2>
+    <p class="signup-text">
+        Don’t have an account?
+        <a href="register.html">Sign up</a>
     </p>
+
+    <form>
+        <div class="input-group">
+    <input type="email" id="email" required />
+    <label for="email">Email</label>
+</div>
+
+    <div class="input-group">
+    <input type="password" id="password" required />
+    <label for="password">Password</label>
+</div>
+
+        <a href="#" class="forgot">Forgot password?</a>
+
+        <button type="submit" class="btn-primary">
+        Continue
+        </button>
+
+        <div class="divider">or</div>
+
+        <button type="button" class="btn-google">
+        <i class="ri-google-fill"></i>  Continue with Google
+        </button>
+
+        <button type="button" class="btn-facebook">
+            <i class="ri-facebook-fill"></i>
+        Continue with Facebook
+        </button>
+
+        <button type="button" class="btn-apple">
+            <i class="ri-apple-fill"></i>
+        Continue with Apple
+        </button>
+    </form>
+
+    <div class="term">
+        <a href="#">Term of Use</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+    </div>
+</div>
+
 </body>
 </html>

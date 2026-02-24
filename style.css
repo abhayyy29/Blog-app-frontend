@@ -1,8 +1,9 @@
-html, body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 body{
     background-color: #242F9B;
@@ -12,6 +13,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background: white;
+    flex-wrap: wrap;
 }
 .logo{
     font-size: 32px;
@@ -37,7 +39,7 @@ body{
 }
 
 .auth{
-    padding: 20px 10px;
+    padding: 10px 15px;
     color: black;
     font-size: 20px;
     font-style: normal;
@@ -47,8 +49,11 @@ body{
 }
 
 .auth a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
     background: #156CE8;
-    padding: 8px 14px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
@@ -66,7 +71,7 @@ border: solid 3px black;
     cursor: pointer;
     background: #156CE8;
     padding: 8px 15px;
-    border: 2px solid black;
+    border: 2px solid transparent;
     border-radius: 5px;
     color: white;
     font-size: 22px;
@@ -74,11 +79,12 @@ border: solid 3px black;
 }
 .signupbtn:hover{
 transform: scale(1.05);
-border: solid 3px black;
+/* border: solid 3px black; */
 color: black;
 }
 
 .hero-content h1{
+    padding-top: 50px;
     color: whitesmoke;
     font-size: 63px;
 }
@@ -89,6 +95,7 @@ color: black;
     padding-bottom: 10px;
 }
 .btn2{
+    cursor: pointer;
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 600;
@@ -96,8 +103,186 @@ color: black;
     border: 2px solid transparent;
 }
 
+.hero{
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .hero-image{
-    padding-top: 70px;
-    border-radius: 40px;
-    border: 5px solid transparent;
+    padding-top: 25px;
+}
+.hero-image img{
+    max-width: 2500px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.secB{
+    background-color: #F4F4F4;
+    overflow: hidden;
+    padding-bottom: 150px;
+}
+
+.secB a{
+    color: black;
+    text-decoration: underline;
+    padding: 90px;
+    font-size: 30px;
+
+}
+.secB h1{
+    color: black;
+    font-size: 55px;
+    padding: 90px 95px;
+}
+.row{
+    padding-left: 90px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.row h4{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+.row p{
+    color: black;
+}
+
+.secC{
+    background-color: white;
+    padding: 120px 150px;
+}
+
+.secC h1{
+    color: black;
+    font-size: 43px;
+    padding: 60px 1px;
+}
+
+.secC .row1{
+display: grid;
+grid-template-columns: repeat(2,2fr);
+gap: 40px;
+}
+.secC .box h4{
+    font-size: 20px;
+}
+.secC .btn{
+    padding: 12px 20px;
+    font-size: 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+}
+
+.secC .btn:hover{
+    color: white;
+    background-color: #156CE8;
+}
+.secC .homeblog-img{
+    padding: 120px 150px;
+}
+.secD{
+    background-color: #FA8971;
+    padding: 120px 70px;
+    
+}
+.secD .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.secD .box h1{
+    font-size: 55px;
+}
+.secD .box h4{
+    font-size: 22px;
+}
+.secDbox button{
+
+    color: white;
+    background-color: black;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    font-size: 22px;
+    padding: 10px 20px;
+    transition: all 0.3 ease;
+}
+.secE{
+    background-color: #ADD7FF;
+    padding-top: 230px;
+    padding-bottom: 150px;
+}
+.secE h1{
+    font-size: 120px;
+    font-weight: 400;
+    color: #014051;
+}
+.secE button{
+    cursor: pointer;
+    background-color:#014051;
+    color: white;
+    font-size: 30px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    padding: 10px 40px;
+    transition: all 0.3 ease;
+}
+.secE button:hover{
+    transform: translate(-2px);
+}
+
+.secF{
+    background-color: white;
+    color: black;
+    padding: 40px 80px;
+    
+}
+/* .footer {
+background-color: #0b2fe0;
+color: white;
+padding: 40px 80px;
+} */
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.footer-box {
+width: 220px;
+}
+
+.footer-box h3,
+.footer-box h4 {
+margin-bottom: 10px;
+}
+
+.footer-box a {
+display: block;
+color: black;
+text-decoration: none;
+margin: 6px 0;
+}
+
+.footer-box a:hover {
+color: blue;
+}
+
+.footer-bottom {
+text-align: center;
+margin-top: 30px;
+font-size: 14px;
+color: gray;
 }
