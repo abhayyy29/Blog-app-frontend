@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | Blogify</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">BLOGIFY</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="posts.html">All Posts</a>
+      <a href="categories.html">Categories</a>
+      <a href="profile.html" class="active">Profile</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="profile-container">
+
+    <!-- USER INFO -->
+    <section class="profile-card">
+      <div class="avatar">A</div>
+
+      <div class="profile-info">
+        <h2>Abhayy</h2>
+        <br>
+        <p class="email">abhaypvt2903@email.com</p>
+        <p class="about">
+          Java & Spring Boot learner building a full-stack blog application.
+        </p>
+
+        <div class="stats">
+          <div>
+            <strong>3</strong>
+            <span>Posts</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>Categories</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY POSTS -->
+    <section class="my-posts">
+      <div class="posts-header">
+        <h3>My Posts</h3>
+        <a href="createPost.html" class="create-btn">+ Create Post</a>
+      </div>
+
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <h4>Learning Spring Boot</h4>
+          <p>My backend journey with Spring Boot and REST APIs.</p>
+          <span class="category">TECH</span>
+        </article>
+
+        <article class="post-card">
+          <h4>Morning Habits</h4>
+          <p>Small daily habits that make a big difference.</p>
+          <span class="category">LIFESTYLE</span>
+        </article>
+
+        <article class="post-card">
+          <h4>Exploring Mountains</h4>
+          <p>A beautiful journey through calm landscapes.</p>
+          <span class="category">TRAVEL</span>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
