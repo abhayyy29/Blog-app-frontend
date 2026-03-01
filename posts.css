@@ -55,6 +55,21 @@ body {
     border: 2px solid black;
 }
 
+.userLinks{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.userLinks a{
+    background: white;
+    color: #1e40af;
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
 /* ===== MAIN ===== */
 .main-content {
     max-width: 1200px;

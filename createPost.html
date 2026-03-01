@@ -30,29 +30,29 @@
     <div class="post-container">
     <h2>Create New Post</h2>
 
-    <form class="post-form">
+    <form id="createPostForm" class="post-form">
 
-        <div class="form-group">
-        <label>Post Title</label>
-        <input type="text" placeholder="Enter post title" />
+        <div  class="form-group">
+        <label for="title">Post Title</label>
+        <input type="text" id="title" placeholder="Enter post title" />
         </div>
 
-        <div class="form-group">
-        <label>Category</label>
-        <select>
-            <option>Select Category</option>
-            <option>Programming</option>
-            <option>Health</option>
-            <option>Technology</option>
+        <div  class="form-group">
+        <label for="categoryId">Category</label>
+        <select id="categoryId">
+            <option value="">Select Category</option>
+            <option value="1">Programming</option>
+            <option value="2">Health</option>
+            <option value="3">Technology</option>
         </select>
         </div>
 
         <div class="form-group">
-        <label>Post Content</label>
-        <textarea rows="6" placeholder="Write your post here..."></textarea>
+        <label for="content"> Post Content</label>
+        <textarea id="content" rows="6" placeholder="Write your post here..."></textarea>
         </div>
 
-        <button type="button" class="submit-btn">Publish Post</button>
+        <button type="submit" class="submit-btn">Publish Post</button>
 
     </form>
     </div>
@@ -125,5 +125,6 @@
 </footer>
     </section>
 
+    <script src="createPost.js"></script>
 </body>
 </html>

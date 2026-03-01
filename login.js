@@ -10,6 +10,8 @@ loginForm.addEventListener("submit", async function (event) {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    console.log("value", email, password);
+
     try{
         const response = await fetch(
             "http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/v1/auth/login",
@@ -21,11 +23,13 @@ loginForm.addEventListener("submit", async function (event) {
                 body: JSON.stringify({
                     username: email,
                     password: password,
-                }),
-            }
-        );
+                })
+            });
+            console.log("response", response);
 
             const data = await response.json();
+                console.log("Login Response Data:", data);
+            
 
             if(savedEmail){
                 const emailInput =document.getElementById("email");
@@ -34,12 +38,14 @@ loginForm.addEventListener("submit", async function (event) {
                 }
             }
             if(response.ok){
-                console.log("Login Success:", data);
-
                 localStorage.setItem("token", data.token);
+                localStorage.setItem("userId", data.id);
                 localStorage.removeItem("registeredEmail");
 
+                setTimeout(()=>{
                 window.location.href = "posts.html";
+                },1500);
+            
         
             }else{
                 alert("Login failed");

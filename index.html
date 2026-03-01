@@ -14,17 +14,25 @@
 
     <!-- <nav class="navbar"> -->
         <a href="#">HOME</a>
-        <a href="#">Blogs</a>
+        <a href="posts.html">Blogs</a>
         <a href="#">Categories</a>
         <a href="#">About</a>
     <!-- </nav> -->
     </div>
-    <div class="auth">
+    <div id="authLinks" class="auth">
         <a href="login.html" class="signinA">Sign In
         </a>
         <a href="register.html">
         <button class="signupbtn">Get Started</button>
         </a>
+    </div>
+    <div class="logindiv" id="userLinks" style="display: none;">
+        <a href="createPost.html">
+        Create Post
+        </a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn">Log out</a>
+
     </div>
     </header>
 
@@ -37,7 +45,8 @@
                 Build write and share your thoughts with the world using Blogify. <br>
                 Simple, fast and powerfull blogging platform.
             </p><br><br>
-            <button class="btn2">Start Blogging</button>
+            
+            <button class="startBloggingBtn">Start Blogging</button>
         </div>
         </center>
         <div class="hero-image">
@@ -45,7 +54,7 @@
         </div>
     </section>
     <section class="secB">
-        <h1>The powerfull infrastructer <br>  
+        <h1>The powerfull infrastructer <br>
             behind your blog</h1>
         <br><br>
         <div class="row">
@@ -71,7 +80,9 @@
             </div>
         </div>
         <br><br>
-            <a href="posts.html">Explore Blogs</a>
+            
+        <button class="startBloggingBtn">Start Blogging</button>
+            
             
     </section>
     <section class="secC">
@@ -104,9 +115,7 @@
         <p>___________________________________________________________________________________________________________________</p>
         
         <br><br><br>
-        <a href="createPost.html">
-        <button class="btn">Start Blogging</button>
-        </a>
+        <button class="startBloggingBtn">Start Blogging</button>
         <br><br>
     </section>
     <section class="secD">
@@ -127,9 +136,9 @@
             <br>
             <p>Download the Wix app to write content and <br> manage your blog anytime, anywhere.</p>
             <br> <br>
-            <a href="createPost.html">
-        <button class="btn">Start Blogging</button>
-        </a>
+            
+        <button class="startBloggingBtn">Start Blogging</button>
+        
         </div>
         <div class="secDbox">
             <img src="home.PNG" alt="Blog Preview">
@@ -141,9 +150,9 @@
         <h1>Create a blog that</h1>
         <h1>   inspires.  </h1>
         <br><br>
-        <a href="createPost.html">
-            <button class="btn">Start Blogging</button>
-        </a>
+        
+            <button class="startBloggingBtn">Start Blogging</button>
+        
         </center>
     </section>
     <section class="secF">
@@ -195,6 +204,6 @@
 </footer>
     </section>
     
+    <script src="navbar.js"></script>
 </body>
-
 </html>
