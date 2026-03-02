@@ -27,24 +27,14 @@
       <div class="avatar">A</div>
 
       <div class="profile-info">
-        <h2>Abhayy</h2>
+        <h2><strong>Name:</strong> <span id="name"></span></h2>
         <br>
-        <p class="email">abhaypvt2903@email.com</p>
+        <p class="email"><strong>Email:</strong> <span id="email"></span></p>
         <p class="about">
-          Java & Spring Boot learner building a full-stack blog application.
+          <strong>About:</strong> <span id="about"></span>
         </p>
+        <p><strong>Role:</strong> <span id="role"></span></p>
 
-        <div class="stats">
-          <div>
-            <strong>3</strong>
-            <span>Posts</span>
-          </div>
-          <div>
-            <strong>3</strong>
-            <span>Categories</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- MY POSTS -->
@@ -54,27 +44,8 @@
         <a href="createPost.html" class="create-btn">+ Create Post</a>
       </div>
 
-      <div class="posts-grid">
-
-        <article class="post-card">
-          <h4>Learning Spring Boot</h4>
-          <p>My backend journey with Spring Boot and REST APIs.</p>
-          <span class="category">TECH</span>
-        </article>
-
-        <article class="post-card">
-          <h4>Morning Habits</h4>
-          <p>Small daily habits that make a big difference.</p>
-          <span class="category">LIFESTYLE</span>
-        </article>
-
-        <article class="post-card">
-          <h4>Exploring Mountains</h4>
-          <p>A beautiful journey through calm landscapes.</p>
-          <span class="category">TRAVEL</span>
-        </article>
-
-      </div>
+      <div id="postsContainer"></div>
+    
     </section>
 
   </main>

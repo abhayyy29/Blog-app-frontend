@@ -35,7 +35,7 @@ body {
   text-decoration: underline;
 }
 
-/* PROFILE CONTAINER */
+/* PROFILE CONTAINER
 .profile-container {
   max-width: 1100px;
   margin: 40px auto;
@@ -128,7 +128,7 @@ body {
   padding: 16px;
   transition: transform 0.2s ease;
 }
-
+/*  */
 .post-card:hover {
   transform: translateY(-4px);
 }
