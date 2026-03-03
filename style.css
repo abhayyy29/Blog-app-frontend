@@ -24,6 +24,7 @@ body{
     padding: 20px 15px;
     color: black;
     font-size: 25px;
+    font-weight: 800;
     font-style: italic;
     display: flex;
     justify-content: space-around;
@@ -125,13 +126,17 @@ color: black;
     font-size: 18px;
     padding-bottom: 10px;
 }
-.btn2{
+.hero-content button{
     cursor: pointer;
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 22px;
     border: 2px solid transparent;
+}
+.hero-content button:hover{
+    background-color: black;
+    color: white;
 }
 
 .hero{
@@ -171,6 +176,12 @@ color: black;
     background-color: black;
     color: white;
     margin-left: 90px;
+    transition: 0.3s ease;
+}
+
+.secB .startBloggingBtn:hover {
+
+    transform: translate(-3px);
 }
 .secB h1{
     color: black;
@@ -220,7 +231,7 @@ gap: 40px;
     background-color: black;
 }
 
-.secC .btn:hover{
+.secC .startBloggingBtn:hover{
     color: white;
     background-color: #156CE8;
 }
@@ -254,6 +265,10 @@ gap: 40px;
     font-size: 22px;
     padding: 10px 20px;
     transition: all 0.3 ease;
+}
+.secD button:hover{
+    background-color: white;
+    color: black;
 }
 .secE{
     background-color: #ADD7FF;

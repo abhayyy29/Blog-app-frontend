@@ -87,15 +87,41 @@ function renderPosts(posts){
         <h4>Content:</h4><p>${post.content}</p>
         <br/>
         </div>
+
         <div class="post-footer">
-        
         Category:${post.category.categoryTitle}
         <span class="author">👤 ${post.user.name}</span>
         <span class="date">📅 ${new Date(post.addedDate).toDateString()}</span>
-        
+        <button onclick="deletePost(${post.postId})" class="delete-btn"> Delete Post</button>
         <hr/>
         </div>
         `;
         container.appendChild(div);
     });
+}
+
+// delete post
+
+async function deletePost(postId) {
+    const token = localStorage.getItem("token");
+
+    if(!confirm("Are you sure you want to delete this post?")) return;
+
+    try{
+        const res = await fetch(
+        `http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/posts/${postId}`,
+        {
+            method: "DELETE",
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        }
+        );
+        if(!res.ok) throw new error("Delete Failed");
+        alert("Post Deleted Sucessfully");
+        location.reload();
+    }catch(err){
+        console.error(err);
+        alert("Error Deleting Post")
+    }
 }
