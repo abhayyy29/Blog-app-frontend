@@ -11,7 +11,7 @@ registerForm.addEventListener("submit", async function (event) {
 
     try {
     const response = await fetch(
-        "http://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/v1/auth/register",
+        "http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/v1/auth/register",
         {
         method: "POST",
         headers: {
