@@ -23,11 +23,11 @@ form.addEventListener("submit", async function (e) {
     }
 
     console.log("DEBUG:",
-        `https://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/user/${userId}/category/${categoryId}/posts`
+        `https://d3djn31vjyk97x.cloudfront.net/api/user/${userId}/category/${categoryId}/posts`
     );
     try {
         const response = await fetch(
-            `http://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/user/${userId}/category/${categoryId}/posts`,
+            `https://d3djn31vjyk97x.cloudfront.net/api/user/${userId}/category/${categoryId}/posts`,
             {
                 method: "POST",
                 headers: {

@@ -14,7 +14,7 @@ loginForm.addEventListener("submit", async function (event) {
 
     try{
         const response = await fetch(
-            "https://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/v1/auth/login",
+            "https://d3djn31vjyk97x.cloudfront.net/api/v1/auth/login",
             {
                 method: "POST",
                 headers: {

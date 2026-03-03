@@ -54,7 +54,7 @@ async function fetchUserPosts(userId,token) {
 
     
     const response = await fetch(
-        `http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/user/${userId}/posts`,
+        `https://d3djn31vjyk97x.cloudfront.net/api/user/${userId}/posts`,
         {
             headers:{
                 "Authorization": `Bearer ${token}`
@@ -109,7 +109,7 @@ async function deletePost(postId) {
 
     try{
         const res = await fetch(
-        `https://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/posts/${postId}`,
+        `https://d3djn31vjyk97x.cloudfront.net/api/posts/${postId}`,
         {
             method: "DELETE",
             headers:{

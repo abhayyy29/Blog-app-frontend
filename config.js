@@ -1,2 +1,2 @@
-const BASE_URL = "https://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api";
+const BASE_URL = "https://d3djn31vjyk97x.cloudfront.net/api";
 export default BASE_URL;
