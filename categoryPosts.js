@@ -8,7 +8,7 @@ async function fetchCategoryPosts() {
 
     try{
         const response = await fetch(
-            `http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/category/${categoryId}/posts`
+            `https://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/category/${categoryId}/posts`
         );
         const data = await response.json();
         const posts = Array.isArray(data) ? data : data.content;

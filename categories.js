@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", fetchCategories);
 async function fetchCategories() {
     try{
         const response = await fetch(
-            "http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/categories/"
+            "https://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/categories/"
             
         );
 

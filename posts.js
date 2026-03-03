@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", fetchAllPosts);
 async function fetchAllPosts() {
     try{
         const response = await fetch(
-        "http://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/posts"
+        "https://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/posts"
         );
         if(!response.ok){
             throw new console.error("Failed to fetch Posts");

@@ -109,7 +109,7 @@ async function deletePost(postId) {
 
     try{
         const res = await fetch(
-        `http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/posts/${postId}`,
+        `https://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/posts/${postId}`,
         {
             method: "DELETE",
             headers:{

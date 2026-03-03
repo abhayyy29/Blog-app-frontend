@@ -23,7 +23,7 @@ form.addEventListener("submit", async function (e) {
     }
 
     console.log("DEBUG:",
-        `http://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/user/${userId}/category/${categoryId}/posts`
+        `https://blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/user/${userId}/category/${categoryId}/posts`
     );
     try {
         const response = await fetch(
