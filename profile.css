@@ -7,7 +7,7 @@
 
 body {
   background: linear-gradient(135deg, #2563eb, #1e40af);
-  min-height: 100vh;
+  min-height: 100%;
   color: #333;
 }
 
@@ -182,5 +182,25 @@ body {
 .post-footer button:hover{
 
   background-color: blue;
+}
+
+@media(max-width: 768px){
+
+  .header{
+    padding: 10px 20px;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    font-size: 11px;
+  }
+  .logo{
+    font-size: 18px;
+  }
+  .post-footer{
+    gap: 10px;
+  }
 }
 
