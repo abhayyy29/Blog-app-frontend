@@ -5,7 +5,7 @@ body{
 
 .postsContainer{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
     gap: 8px;
 }
 .post-card{
@@ -43,4 +43,8 @@ body{
 }
 .nav a:hover{
     color: blue;
+}
+
+@media(max-width: 768px){
+
 }
