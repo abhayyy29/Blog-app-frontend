@@ -196,6 +196,8 @@ body {
   .header{
     padding: 10px 20px;
   }
+
+  
   .navbar{
     display: flex;
     justify-content: space-around;
@@ -205,6 +207,9 @@ body {
   }
   .logo{
     font-size: 18px;
+    font-style: italic;
+    
+
   }
   .post-footer{
     gap: 10px;
