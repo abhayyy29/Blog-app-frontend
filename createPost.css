@@ -201,33 +201,32 @@ background-color: #ADD7FF;
     overflow-x: hidden;
   }
   .header{
-    margin: 13px;
+    /* margin: 13px; */
     padding: 10px 10px;
     width: 100%;
   }
+  .header a{
+    font-size: 13px;
+  }
   .page{
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     height: auto;
     margin: 0;
   }
-  .post-container{
-    margin-left: 10px;
-  }
-
-  .pics-box{
   
+  .pics-box{
     width: 100%;
     height: auto;
   }
   .pics-box img{
-    width: 200px;
+    width: 180px;
     height: auto;
   }
 
   .secB{
-    margin: 2%;
+    /* margin: 2%; */
     width: 100%;
     max-width: 100%;
     display: block;
@@ -236,7 +235,7 @@ background-color: #ADD7FF;
     font-size: 40px;
   }
   .secF{
-    margin: 2%;
+    /* margin: 2%; */
     width: 100%;
     max-width: 100%;
   
