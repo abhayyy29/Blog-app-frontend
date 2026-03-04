@@ -369,10 +369,11 @@ color: gray;
 @media (max-width: 768px){
 
     .header{
-        flex-direction: row;
-        text-align: center;
-        flex-wrap: nowrap;
-        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 10px;
     }
 
     .logo{
@@ -384,11 +385,10 @@ color: gray;
     .navbar{
         padding: 1px;
         display: flex;
-        gap: 5px;
+        gap: 8px;
     }
     .navbar a{
-        font-size: 12px;
-        white-space: unset;
+        font-size: 10px;
     }
 
     .auth{
