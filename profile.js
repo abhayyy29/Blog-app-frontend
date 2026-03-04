@@ -19,7 +19,7 @@ async function fetchProfile(userId, token) {
 
     try {
     const response = await fetch(
-        `http://Blog-app-env.eba-axajqaxr.eu-north-1.elasticbeanstalk.com/api/users/${userId}`,
+        `https://d3djn31vjyk97x.cloudfront.net/api/users/${userId}`,
         {
         headers: {
             "Authorization": `Bearer ${token}`
