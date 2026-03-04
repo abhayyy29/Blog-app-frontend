@@ -59,7 +59,7 @@ function renderPosts(posts){
         <div class="post-footer">
         
         Category:${post.category.categoryTitle}
-        <span class="author">👤 ${post.user.name}</span>
+        <a class="author" href="profile.html?userId=${post.user.id}">👤 ${post.user.name}</a>
         <span class="date">📅 ${new Date(post.addedDate).toDateString()}</span>
         
         <hr/>

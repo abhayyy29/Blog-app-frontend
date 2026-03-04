@@ -3,7 +3,8 @@ const token = localStorage.getItem("token");
 document.addEventListener("DOMContentLoaded", () => {
     
     const token = localStorage.getItem("token");
-    const userId = localStorage.getItem("userId");
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get("userId") || localStorage.getItem("userId");
 
     if (!token || !userId) {
     alert("Please login first");
