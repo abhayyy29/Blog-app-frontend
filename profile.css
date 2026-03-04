@@ -20,6 +20,13 @@ body {
   color: white;
 }
 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
 .logo {
   font-size: 22px;
   font-weight: bold;
