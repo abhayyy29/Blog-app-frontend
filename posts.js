@@ -36,6 +36,32 @@ async function fetchAllPosts() {
         alert("Error in loading Posts");
     }
 }
+
+
+async function deletePost(postId) {
+    const token = localStorage.getItem("token");
+
+    if(!confirm("Are you sure you want to delete this post?")) return;
+
+    try{
+        const res = await fetch(
+        `https://d3djn31vjyk97x.cloudfront.net/api/posts/${postId}`,
+        {
+            method: "DELETE",
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        }
+        );
+        if(!res.ok) throw new error("Delete Failed");
+        alert("Post Deleted Sucessfully");
+        location.reload();
+    }catch(err){
+        console.error(err);
+        alert("Error Deleting Post")
+    }
+}
+
 function renderPosts(posts){
     const container = document.getElementById("postsContainer");
     container.innerHTML= "";
@@ -49,6 +75,17 @@ function renderPosts(posts){
         const div = document.createElement("div");
         div.classList.add("post-card");
 
+    
+
+        const loggedInUser = Number(localStorage.getItem("userId"));
+
+        console.log("Logged User:", loggedInUser);
+        console.log("PostUserId:", post.user.id);
+
+        const deletebutton = post.user.id === loggedInUser
+        ? `<button onclick="deletePost(${post.postId})">Delete</button>`
+        :"";
+
         div.innerHTML= `
         <div class="pot-body">
         <h2> Title: ${post.title}</h2>
@@ -61,7 +98,8 @@ function renderPosts(posts){
         Category:${post.category.categoryTitle}
         <a class="author" href="profile.html?userId=${post.user.id}">👤 ${post.user.name}</a>
         <span class="date">📅 ${new Date(post.addedDate).toDateString()}</span>
-        
+        ${deletebutton}
+
         <hr/>
         </div>
         `;

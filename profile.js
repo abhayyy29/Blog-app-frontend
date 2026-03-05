@@ -81,6 +81,12 @@ function renderPosts(posts){
         const div = document.createElement("div");
         div.classList.add("post-card");
 
+        const loggedInUser = Number(localStorage.getItem("userId"));
+
+        const deletebutton = post.user.id === loggedInUser
+        ? `<button onclick="deletePost(${post.postId})">Delete</button>`
+        :"";
+
         div.innerHTML= `
         <div class="post-body">
         <h2> Title: ${post.title}</h2>
@@ -93,7 +99,7 @@ function renderPosts(posts){
         Category:${post.category.categoryTitle}
         <span class="author">👤 ${post.user.name}</span>
         <span class="date">📅 ${new Date(post.addedDate).toDateString()}</span>
-        <button onclick="deletePost(${post.postId})" class="delete-btn"> Delete Post</button>
+        ${deletebutton}
         <hr/>
         </div>
         `;
