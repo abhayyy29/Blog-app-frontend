@@ -60,6 +60,9 @@ form.addEventListener("submit", async function (e) {
         return;
     }
 
+    console.log("token:", token);
+    console.log("PostId:", postId);
+
     try {
         const response = await fetch(
                     `https://d3djn31vjyk97x.cloudfront.net/api/posts/${postId}`,
@@ -73,8 +76,7 @@ form.addEventListener("submit", async function (e) {
                     title: title,
                     content: content
                 })
-            }
-        );
+            });
 
         if (response.ok) {
             alert("Post updated successfully");
