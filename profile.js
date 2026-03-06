@@ -87,6 +87,10 @@ function renderPosts(posts){
         ? `<button onclick="deletePost(${post.postId})">Delete</button>`
         :"";
 
+        const editbutton = post.user.id === loggedInUser
+        ? `<button onclick="editPost(${post.postId})">Edit Post</button>`
+        :"";
+
         div.innerHTML= `
         <div class="post-body">
         <h2> Title: ${post.title}</h2>
@@ -100,6 +104,7 @@ function renderPosts(posts){
         <span class="author">👤 ${post.user.name}</span>
         <span class="date">📅 ${new Date(post.addedDate).toDateString()}</span>
         ${deletebutton}
+        ${editbutton}
         <hr/>
         </div>
         `;
@@ -131,4 +136,8 @@ async function deletePost(postId) {
         console.error(err);
         alert("Error Deleting Post")
     }
+}
+
+async function  editPost(postId) {
+    window.location.href=`editPost.html?postId=${postId}`;
 }

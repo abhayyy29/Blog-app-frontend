@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2b6cff, #5f9cff);
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    color: black;
+    background-color: white;
+}
+
+.header .nav a{
+    color: black;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.page{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    gap: 40px;
+    margin: 40px 20px;
+}
+
+.pics-box{
+    padding-right: 50%;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    width: 400px;
+    max-width: 100%;
+    gap: 28px;
+}
+
+.pics-box img{
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.pic3{
+    margin-bottom: 40px;
+}
+.pic4,
+.pic2{
+    margin-top: 50px;
+}
+.nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.userLinks a{
+    margin-left: 20px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.userLinks a:hover{
+    text-decoration: underline;
+    background-color: #ADD7FF;
+}
+
+/* Post Card */
+.post-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.post-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form */
+.post-form .form-group {
+  margin-bottom: 20px;
+}
+
+.post-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.post-form input,
+.post-form select,
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.post-form input:focus,
+.post-form select:focus,
+.post-form textarea:focus {
+  outline: none;
+  border-color: #2b6cff;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2b6cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1e54cc;
+}
+
+.secB{
+    background-color: #ADD7FF;
+    padding-top: 230px;
+    padding-bottom: 150px;
+}
+.secB h1{
+    font-size: 120px;
+    font-weight: 400;
+    color: #014051;
+}
+.secB button{
+    cursor: pointer;
+    background-color:#014051;
+    color: white;
+    font-size: 30px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    padding: 10px 40px;
+    transition: all 0.3 ease;
+}
+.secB button:hover{
+    transform: translate(-2px);
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+background-color: black;
+padding: 50px 0px;
+}
+.footer-box {
+width: 220px;
+color: white;
+}
+
+.footer-box h3,
+.footer-box h4 {
+margin-bottom: 10px;
+color: white;
+}
+
+.footer-box a {
+display: block;
+color: white;
+text-decoration: none;
+}
+
+.footer-box a:hover {
+color: blue;
+}
+
+.footer-bottom {
+text-align: center;
+margin-bottom: 30px;
+font-size: 14px;
+height: 50px;
+color: black;
+background-color: #ADD7FF;
+}
+
+@media (max-width: 768px) {
+  
+  body{
+    overflow-x: hidden;
+  }
+  .header{
+    /* margin: 13px; */
+    padding: 10px 10px;
+    width: 100%;
+  }
+  .header a{
+    font-size: 13px;
+  }
+  .page{
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+  .pics-box{
+    width: 100%;
+    height: auto;
+  }
+  .pics-box img{
+    width: 180px;
+    height: auto;
+  }
+
+  .secB{
+    /* margin: 2%; */
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  .secB h1{
+    font-size: 40px;
+  }
+  .secF{
+    /* margin: 2%; */
+    width: 100%;
+    max-width: 100%;
+  
+  }
+  .footer-container{
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+

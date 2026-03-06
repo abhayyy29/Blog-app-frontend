@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="editPost.css">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">thecodeehub</div>
+
+    <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="posts.html" class="active">All Posts</a>
+    <a href="categories.html">Categories</a>
+    <a href="profile.html">Profile</a>
+    </nav>
+
+    <div class="auth" id="authLinks">
+        <a href="createPost.html" class="login-btn">Create Post</a>
+        <a href="login.html" class="login-btn">Login</a>
+    </div>
+    <div id="userLinks" class="userLinks">
+    <a href="createPost.html" class="login-btn">Create Post</a>
+    <a href="profile.html">Profile</a>
+    </div>
+</header>
+
+<br><br>
+
+
+    <!-- Page Wrapper -->
+    <div class="page">
+
+    <!-- Create Post Card -->
+    <div class="post-container">
+    <h2>Edit Post</h2>
+
+    <form id="editPostForm" class="post-form">
+
+        <div  class="form-group">
+        <label for="title">Post Title</label>
+        <input type="text" id="title" placeholder="Enter post title" />
+        </div>
+
+        <div  class="form-group">
+        <label for="categoryId">Category</label>
+        <select id="categoryId">
+            <option value="">Select Category</option>
+            <option value="1">Programming</option>
+            <option value="2">Health</option>
+            <option value="3">Technology</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label for="content"> Post Content</label>
+        <textarea id="content" rows="6" placeholder="Write your post here..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Update Post</button>
+
+    </form>
+    </div>
+
+    <div class="pics-box">
+            <img class="pic1" src="https://images.unsplash.com/photo-1770131091442-e672bd558370?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="Image Preview">
+            <img class="pic4" src="https://images.unsplash.com/photo-1772657257833-ed30e5e3e402?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNHx8fGVufDB8fHx8fA%3D%3D" alt="Image Preview">
+            <img class="pic3" src="https://images.unsplash.com/photo-1772528205616-e65dc0994c7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D" alt="Image Preview">
+            <img class="pic2" src="https://images.unsplash.com/photo-1771613934266-0f474dc34245?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D" alt="Image Preview">
+
+    </div>
+</div>
+    </section>
+
+    <section class="secB">
+    <center>
+        <h1>Create a blog that</h1>
+        <h1>   inspires.  </h1>
+        <br><br>
+        <a href="posts.html">
+            <button class="btn">Start Blogging</button>
+        </a>
+        </center>
+    </section>
+    <section class="secF">
+        <footer class="footer">
+    <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-box">
+    <h3>Blogify</h3>
+    <p>
+        Blogify is a simple and secure blogging platform
+        to write, share and manage your ideas.
+    </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-box">
+    <h4>Product</h4>
+    <a href="#">Features</a>
+    <a href="categories.html">Categories</a>
+    <a href="posts.html">Explore Blogs</a>
+    <a href="index.html">Home</a>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-box">
+    <h4>Resources</h4>
+    <a href="#">Help Center</a>
+    <a href="#">API Docs</a>
+    <a href="#">Security</a>
+    <a href="#">Privacy Policy</a>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-box">
+    <h4>Connect</h4>
+    <a href="https://www.linkedin.com/in/abhayy2903?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+    <a href="https://github.com/abhayyy29">GitHub</a>
+    <a href="https://x.com/abhayy2903?s=21">Twitter (X)</a>
+    <a href="https://www.instagram.com/codingstepswithabhayy?igsh=bzhyZXlrNnFjcGU3&utm_source=qr">Instagram</a>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    <p>© 2026 Blogify | Built by Abhay Singh</p>
+</div>
+
+</footer>
+    </section>
+
+    <script src="editPost.js"></script>
+</body>
+</html>
