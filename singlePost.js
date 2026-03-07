@@ -87,19 +87,22 @@ function renderPosts(posts){
         :"";
 
         div.innerHTML= `
-        <div class="post-body">
+        <div class="pot-body">
         <h2> Title: ${post.title}</h2>
         <br/>
-        <h4>Content:</h4><p>${post.content.substring(1,100)}...</p>
+        <h4>Content:</h4><p>${post.content}</p>
         <br/>
-        <a href="singlePost.html?postId=${post.postId}" class= "read-more">
-        Read more
-        </a>
         </div>
+        <div class="post-footer">
+        
+        Category:${post.category.categoryTitle}
+        <a class="author" href="profile.html?userId=${post.user.id}">👤 ${post.user.name}</a>
+        <span class="date">📅 ${new Date(post.addedDate).toDateString()}</span>
+        ${deletebutton}
 
+        <hr/>
         </div>
         `;
         container.appendChild(div);
     });
 }
-
