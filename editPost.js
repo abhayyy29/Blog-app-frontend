@@ -19,6 +19,9 @@ if(authLinks && userLinks){
 
 document.addEventListener("DOMContentLoaded", loadPost);
 
+if(!token){
+    window.location.href="login.html";
+}
 const userId = localStorage.getItem("userId");
 const params = new URLSearchParams(window.location.search);
 const postId = params.get("postId");
