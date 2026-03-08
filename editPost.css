@@ -16,9 +16,20 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
 }
+.headerwrap{
+  
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    color: black;
+    width: 100%;
+    background-color: #ADD7FF;
+}
+
 
 .header .nav a{
     color: black;
@@ -223,12 +234,24 @@ background-color: #ADD7FF;
   .header a{
     font-size: 9px;
   }
+  .headerwrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    color: black;
+    width: 100%;
+    background-color: #ADD7FF;
+  }
 
   .logo{
     font-size: 12px;
   }
 
   
+  .nav{
+    margin-left: 10px;
+  }
 .nav a {
   margin: 0;
   color: white;
