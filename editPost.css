@@ -216,16 +216,48 @@ background-color: #ADD7FF;
     overflow-x: hidden;
   }
   .header{
-    /* margin: 13px; */
     padding: 10px 10px;
     width: 100%;
+    gap: 10px;
   }
   .header a{
-    font-size: 13px;
+    font-size: 9px;
   }
+
+  .logo{
+    font-size: 12px;
+  }
+
+  
+.nav a {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 9px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.userLinks a{
+    margin-left: 20px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px 3px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.userLinks a:hover{
+    text-decoration: underline;
+    background-color: #ADD7FF;
+}
+
   .page{
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
     height: auto;
     margin: 0;

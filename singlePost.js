@@ -18,19 +18,27 @@ if(authLinks && userLinks){
     }
 }
 
-document.addEventListener("DOMContentLoaded", fetchAllPosts);
+document.addEventListener("DOMContentLoaded", () => {
 
-async function fetchAllPosts() {
+const params = new URLSearchParams(window.location.search);
+const postId = params.get("postId");
+console.log("PostId:", postId);
+fetchSinglePost(postId);
+
+});
+
+
+async function fetchSinglePost(postId) {
     try{
         const response = await fetch(
-        "https://d3djn31vjyk97x.cloudfront.net/api/posts"
+        `https://d3djn31vjyk97x.cloudfront.net/api/posts/${postId}`
         );
         if(!response.ok){
             throw new console.error("Failed to fetch Posts");
         }
         const data = await response.json();
 
-        renderPosts(data.content);
+        renderPosts(data);
     }catch (error){
         console.error("Error", error);
         alert("Error in loading Posts");
@@ -62,16 +70,16 @@ async function deletePost(postId) {
     }
 }
 
-function renderPosts(posts){
+function renderPosts(post){
     const container = document.getElementById("postsContainer");
     container.innerHTML= "";
 
-    if(!posts || posts.length ===0){
+    if(!post || post.length ===0){
     container.innerHTML = "<p>No posts available</p>"
     return
     }
 
-    posts.forEach(post => {
+    
         const div = document.createElement("div");
         div.classList.add("post-card");
 
@@ -104,5 +112,5 @@ function renderPosts(posts){
         </div>
         `;
         container.appendChild(div);
-    });
+    ;
 }

@@ -30,6 +30,7 @@ body {
     margin: 0 12px;
     text-decoration: none;
     color: white;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -153,4 +154,78 @@ text-align: center;
 padding: 20px;
 margin-top: 40px;
 color: #666;
+}
+
+@media (max-width: 768px){
+
+    
+    .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 10px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    }
+
+    
+.logo {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nav a {
+    margin: 0 ;
+    text-decoration: none;
+    color: white;
+    font-size: 8px;
+    
+}
+
+.nav a.active {
+    border-bottom: 2px solid white;
+}
+
+.auth{
+    display: flex;
+    gap: 7px;
+}
+.login-btn {
+    background: white;
+    color: #1e40af;
+    padding: 4px 5px;
+    border-radius: 10px;
+    margin: 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn:hover{
+    border: 2px solid black;
+}
+
+.userLinks{
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+.userLinks a{
+    background: white;
+    color: #1e40af;
+    padding: 4px 5px;
+    border-radius: 10px;
+    margin: 0;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.post-footer{
+    font-size: 9px;
+}
+.post-footer button{
+    padding: 2px 2px;
+}
+
 }
