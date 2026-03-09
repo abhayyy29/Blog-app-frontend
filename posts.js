@@ -86,8 +86,15 @@ function renderPosts(posts){
         ? `<button onclick="deletePost(${post.postId})">Delete</button>`
         :"";
 
+        const imageUrl = post.imageName
+        ? `https://d3djn31vjyk97x.cloudfront.net/api/post/image/${post.imageName}`
+        : ``;
+
         div.innerHTML= `
         <div class="post-body">
+
+        ${imageUrl ? `<img src="${imageUrl}" class="post-image">` : ''}
+
         <h2> Title: ${post.title}</h2>
         <br/>
         <h4>Content:</h4><p>${post.content.substring(1,100)}...</p>
