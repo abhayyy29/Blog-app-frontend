@@ -99,15 +99,14 @@ function renderPosts(post){
         : ``;
 
         div.innerHTML= `
-        <div class="pot-body">
+        <div class="post-body">
 
         <img src="${imageUrl}" class="post-image">
-
 
         <h2> Title: ${post.title}</h2>
         <br/>
         <h4>Content:</h4><p>${post.content}</p>
-        <br/>
+        
         </div>
         <div class="post-footer">
         

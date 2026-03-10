@@ -97,7 +97,8 @@ function renderPosts(posts){
 
         <h2> Title: ${post.title}</h2>
         <br/>
-        <h4>Content:</h4><p>${post.content.substring(1,100)}...</p>
+        <h4>Content:</h4> <br/> <p>${post.content.substring(0,100)}...</p>
+        <br/>
         <br/>
         <a href="singlePost.html?postId=${post.postId}" class= "read-more">
         Read more

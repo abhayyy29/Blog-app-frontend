@@ -8,7 +8,7 @@
 
 /* ===== BODY ===== */
 body {
-    background: #f5f7fb;
+    background: #333;
     color: #333;
 }
 
@@ -80,7 +80,7 @@ body {
 /* ===== POSTS GRID ===== */
 .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
 }
 
@@ -104,6 +104,8 @@ body {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
+    border: 2px solid white;
+    padding: 8px 8px;
 }
 
 .post-card img {
@@ -115,6 +117,8 @@ body {
 /* ===== POST BODY ===== */
 .post-body {
     padding: 16px;
+    background-color: black;
+    
 }
 
 .category {
@@ -124,14 +128,19 @@ body {
     text-transform: uppercase;
 }
 
-.post-body h3 {
+.post-body h2 {
 margin: 8px 0;
 font-size: 18px;
+color: white;
+}
+
+.post-body h4{
+    color:  white;
 }
 
 .post-body p {
 font-size: 14px;
-color: #555;
+color: white;
 margin-bottom: 12px;
 }
 
@@ -161,7 +170,7 @@ color: #777;
 text-align: center;
 padding: 20px;
 margin-top: 40px;
-color: #666;
+color: white;
 }
 
 .read-more{
@@ -175,4 +184,13 @@ color: #666;
 }
 .read-more:hover{
     text-decoration: underline;
+}
+
+@media(max-width: 768px){
+
+    .main-content {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 }

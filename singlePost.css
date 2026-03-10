@@ -7,7 +7,7 @@
 
 /* ===== BODY ===== */
 body {
-    background: #f5f7fb;
+    background: #333;
     color: #333;
 }
 
@@ -84,6 +84,8 @@ body {
     gap: 24px;
 }
 
+
+
 /* ===== POST CARD ===== */
 .post-card {
     background: white;
@@ -100,22 +102,26 @@ body {
 
 .post-image{
     width: 100%;
-    max-height: 400px;
+    max-height: 800px;
     object-fit: cover;
-    border-radius: 8px;
     margin-bottom: 10px;
+    border: 5px solid black;
+    /* padding: 12px 12px; */
 }
 
 .post-card img {
     width: 100%;
-    height: 200px;
+    height: auto;
+    border-radius: 30px;
     object-fit: cover;
 }
 
 /* ===== POST BODY ===== */
 .post-body {
-    padding: 16px;
+    padding: 50px;
+    background-color: #ADD7FF;
 }
+
 
 .category {
     font-size: 12px;
@@ -124,13 +130,13 @@ body {
     text-transform: uppercase;
 }
 
-.post-body h3 {
-margin: 8px 0;
-font-size: 18px;
+.post-body h2 {
+margin: 30px 0px;
+font-size: 28px;
 }
 
 .post-body p {
-font-size: 14px;
+font-size: 24px;
 color: #555;
 margin-bottom: 12px;
 }
@@ -139,8 +145,10 @@ margin-bottom: 12px;
 .post-footer {
 display: flex;
 justify-content: space-between;
-font-size: 12px;
+font-size: 22px;
 color: #777;
+padding: 10px 50px;
+background-color: #ADD7FF;
 }
 
 .post-footer button{
@@ -161,7 +169,7 @@ color: #777;
 text-align: center;
 padding: 20px;
 margin-top: 40px;
-color: #666;
+color: white;
 }
 
 @media (max-width: 768px){
@@ -230,6 +238,9 @@ color: #666;
 }
 
 .post-footer{
+    gap: 0;
+    padding: 10px;
+    margin: 0;
     font-size: 9px;
 }
 .post-footer button{
