@@ -161,6 +161,51 @@ margin-bottom: 12px;
     color: white;
 }
 
+.comments-container{
+    margin: 20px 5px;
+    padding: 20px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #212328;
+    height: auto;
+    color: white;
+    
+}
+.comments-container h3{
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+}
+.comments-container p{
+    font-size: 12px;
+    color: white;
+}
+.comments-container b{
+    font-size: 15px;
+}
+
+.comment-input{
+    background-color: #212328;
+    color: whitesmoke;
+    width: 93%;
+    border: 1px solid white;
+    padding: 4px 4px;
+    border-radius: 4px;
+}
+.comment-inputdiv{
+    display: flex;
+    justify-content: space-between;
+}
+.comments-container button{
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.comments-container button:hover{
+    background: black;
+    color: whitesmoke;
+}
+
 /* ===== POST FOOTER ===== */
 .post-footer {
 display: flex;

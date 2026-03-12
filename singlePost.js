@@ -121,7 +121,7 @@ function renderPosts(post){
 
 </div>
 
-        <div id="comments-container" style="display:none"></div>
+        <div id="comments-container" class="comments-container" style="display:none"></div>
 
 </div>
         
@@ -163,7 +163,7 @@ async function loadComments(postId) {
 
     const container = document.getElementById("comments-container");
 
-    container.innerHTML = "";
+    container.innerHTML = "<h3>Comments</h3>";
 
     commentList.forEach(comment => {
         
@@ -172,14 +172,19 @@ async function loadComments(postId) {
         div.classList.add("comment");
 
         div.innerHTML = `
-        <p><b>${comment.user?.name || "USER"}:</b> ${comment.content}</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+        <p><b>${comment.user?.name || "User"}:</b></br> ${comment.content}</p>
+        <button onclick="deleteComment(${comment.id}, ${postId})">Delete</button>
+        </div>
         `;
         container.appendChild(div);
     });
 
     container.innerHTML += `
-    <input type = "text" id="comment-input" placeholder="Write a comment...">
+    <div class="comment-inputdiv">
+    <input type = "text" id="comment-input" class="comment-input" placeholder="Write a comment...">
     <button onclick="addComment(${postId})">Post</button>
+    </div>
     `;
 }
 
@@ -211,6 +216,25 @@ async function addComment(postId) {
     if(response.ok){
 
         input.value="";
+        loadComments(postId);
+    }
+}
+
+async function deleteComment(commentId) {
+    
+    const token = localStorage.getItem("token");
+
+    const response = await fetch(
+        `https://d3djn31vjyk97x.cloudfront.net/api/comments/${commentId}`,
+        {
+            method: "DELETE",
+            headers:{
+                "Authorization": `Bearer ${token}`
+            }
+        }
+    );
+
+    if(response.ok){
         loadComments(postId);
     }
 }
