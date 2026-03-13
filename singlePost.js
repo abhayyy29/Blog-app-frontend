@@ -91,6 +91,7 @@ function renderPosts(post){
         const loggedInUser = Number(localStorage.getItem("userId"));
 
         console.log("Logged User:", loggedInUser);
+        localStorage.setItem("postUserId", post.user.id);
         console.log("PostUserId:", post.user.id);
 
         const deletebutton = post.user.id === loggedInUser
@@ -161,6 +162,12 @@ async function loadComments(postId) {
     const comments = await response.json();
     const commentList = Array.isArray(comments) ? comments : comments.content || [];
 
+    const loggedInUser = Number(localStorage.getItem("userId"));
+    const postUserId = Number(localStorage.getItem("postUserId"));
+
+        console.log("Logged User:", loggedInUser);
+        console.log("PostUserId:", postUserId);
+
     const container = document.getElementById("comments-container");
 
     container.innerHTML = "<h3>Comments</h3>";
@@ -174,7 +181,10 @@ async function loadComments(postId) {
         div.innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:center;">
         <p><b>${comment.user?.name || "User"}:</b></br> ${comment.content}</p>
-        <button onclick="deleteComment(${comment.id}, ${postId})">Delete</button>
+        ${(loggedInUser === postUserId || loggedInUser === comment.userId)?
+        '<button class="delete-btn" onclick="deleteComment(${comment.id},${postId})">Delete</button>'
+        : ''}
+        
         </div>
         `;
         container.appendChild(div);
@@ -183,7 +193,7 @@ async function loadComments(postId) {
     container.innerHTML += `
     <div class="comment-inputdiv">
     <input type = "text" id="comment-input" class="comment-input" placeholder="Write a comment...">
-    <button onclick="addComment(${postId})">Post</button>
+    <button onclick="addComment(${postId})"><i class="ri-send-ins-fill"></i></button>
     </div>
     `;
 }
@@ -220,7 +230,7 @@ async function addComment(postId) {
     }
 }
 
-async function deleteComment(commentId) {
+async function deleteComment(commentId,postId) {
     
     const token = localStorage.getItem("token");
 

@@ -196,10 +196,24 @@ margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
 }
-.comments-container button{
-    padding: 5px 5px;
+
+.comment-inputdiv button{
+    padding: 10px 10px;
+    font-size: 15px;
+    margin-right: 20px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: blue;
+}
+.delete-btn{
+    padding: 4px 8px;
+    font-size: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid black;
+    color: blue;
 }
 .comments-container button:hover{
     background: black;

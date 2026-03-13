@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Create Post | Blogify</title>
     <link rel="stylesheet" href="createPost.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
 
@@ -34,7 +38,14 @@
 
         <div class="form-group">
             <label>Upload Image</label>
-            <input type="file" id="image">
+            <input type="file" id="image" style="display: none" accept="image/*">
+
+            <div onclick="document.getElementById('image').click()"
+            style="cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 10px; border: 2px dashed #ccc; border-radius: 8px;">
+            <i class="ri-file-add-fill"></i>
+            <span id="fileName">Click to Upload image</span>
+
+            </div>
         </div>
 
         <div  class="form-group">
