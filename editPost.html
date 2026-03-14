@@ -41,6 +41,18 @@
 
     <form id="editPostForm" class="post-form">
 
+        <div class="form-group">
+            <label>Upload Image</label>
+            <input type="file" id="image" style="display: none" accept="image/*">
+
+            <div onclick="document.getElementById('image').click()"
+            style="cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 10px; border: 2px dashed #ccc; border-radius: 8px;">
+            <i class="ri-file-add-fill"></i>
+            <span id="fileName">Click to Upload image</span>
+
+            </div>
+        </div>
+        
         <div  class="form-group">
         <label for="title">Post Title</label>
         <input type="text" id="title" placeholder="Enter post title" />

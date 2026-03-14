@@ -94,3 +94,8 @@ form.addEventListener("submit", async function (e) {
         alert("Something went wrong");
     }
 });
+
+document.getElementById("image").addEventListener("change", function(){
+        const fileName = this.files[0]?.name || "Click to Upload image";
+        document.getElementById("fileName").textContent= fileName;
+    })
