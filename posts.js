@@ -87,7 +87,7 @@ function renderPosts(posts){
         :"";
 
         const imageUrl = post.imageName
-        ? `https://d3djn31vjyk97x.cloudfront.net/api/post/image/${post.imageName}`
+        ? `https://thecodeehb-images.s3.eu-north-1.amazonaws.com/${post.imageName}`
         : ``;
 
         div.innerHTML= `
