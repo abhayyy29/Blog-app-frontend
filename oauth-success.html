@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Success</title>
+</head>
+<body>
+    
+    <h2>Logging youu in</h2>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get("token");
+
+        if(token){
+            localStorage.setItem("token", token);
+            alert("Login Successful!!");
+
+            window.location.href="posts.html";
+        }else{
+            alert("Login Failed");
+        }
+    </script>
+</body>
+</html>
