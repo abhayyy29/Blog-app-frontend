@@ -85,6 +85,9 @@ body {
     text-decoration: none;
 }
 
+.atag-text{
+    color: white;
+}
 /* input {
 width: 100%;
 padding: 12px;
@@ -104,6 +107,7 @@ border-color: #1a73e8;
     text-align: right;
     font-size: 13px;
     margin-bottom: 15px;
+    color: white;
     text-decoration: none;
     
 }
@@ -111,7 +115,7 @@ border-color: #1a73e8;
 .btn-primary {
     width: 100%;
     padding: 12px;
-    background-color : #1a73e8;
+    
     color: black;
     border: none;
     border-radius: 6px;
@@ -125,7 +129,7 @@ border-color: #1a73e8;
 
 .divider {
     margin: 20px 0;
-    color: #888;
+    color: black;
     font-size: 14px;
 }
 
@@ -135,7 +139,8 @@ button[class^="btn-"] {
     margin-bottom: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    background: #fff;
+    background: black;
+    color: white;
     cursor: pointer;
     font-size: 14px;
     display: flex;
@@ -144,17 +149,15 @@ button[class^="btn-"] {
     gap: 10px;
 }
 
-.btn-google i,
-.btn-facebook,
-.btn-apple{
+
+
+.btn-google i{
     font-size: 16px;
-    color: black;
+    color: white;
 }
 
-.btn-google:hover,
-.btn-facebook:hover,
-.btn-apple:hover {
-    background: #f5f5f5;
+.btn-google:hover{
+    background: blue;
 }
 .term{
     display: flex;
@@ -163,4 +166,12 @@ button[class^="btn-"] {
     padding-top: 7px;
     font-size: 13px;
     gap: 8px;
+}
+
+.term a{
+    color: black;
+}
+
+a{
+    text-decoration: none;
 }

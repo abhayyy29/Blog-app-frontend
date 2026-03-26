@@ -150,7 +150,8 @@ button[class^="btn-"] {
     margin-bottom: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    background: #fff;
+    background: black;
+    color: white;
     cursor: pointer;
     font-size: 14px;
     display: flex;
@@ -159,22 +160,7 @@ button[class^="btn-"] {
     gap: 10px;
 }
 
-.btn-google i,
-.btn-facebook,
-.btn-apple{
-    font-size: 16px;
-    color: black;
-}
-
-.btn-google:hover,
-.btn-facebook:hover,
-.btn-apple:hover {
-    background: #f5f5f5;
-}
 .term{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 7px;
     font-size: 13px;
     gap: 8px;
